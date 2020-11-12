@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
@@ -38,6 +39,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Transactional
+@Service
 public class MpesaKcbDisburseService {
     private final Logger logger = LoggerFactory.getLogger(getClass());
     @Value("${mpesa.base.url}")
